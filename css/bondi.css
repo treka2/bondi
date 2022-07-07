@@ -1,0 +1,228 @@
+:root{
+    --dark-clr:#19283e;
+    --alt-clr:#33d1cc;
+    --red-clr:#ff3150;
+    --yel-clr:#ffc400;
+    --section-bag:#eff7fa
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+};
+body{
+    font-family: 'Roboto', sans-serif;
+}
+/* strt nav  */
+.navbar{
+    background-color: var(--dark-clr);
+}
+.navbar .navbar-nav .nav-link{
+    color: #fff;
+}
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link.active{
+    color: var(--alt-clr);
+}
+.search{
+    color: var(--alt-clr);
+    border-left: 1px solid var(--alt-clr);
+}
+.navbar .navbar-toggler{
+    color: #fff;font-size: 25px;
+    border-color: #fff;
+}
+.navbar .navbar-toggler:focus{
+    box-shadow: none;
+}
+.main-btn{
+background-color: var(--red-clr);
+color: var(--yel-clr);
+padding: 0.5rem 1.1rem;
+border: none;
+}
+/* all  */
+.main-btn:hover{
+background-color: var(--red-clr);
+color: #fff;
+}
+.main-title::before{
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 1px;
+    background-color: var(--alt-clr);
+    bottom: -0.9rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* end nav  */
+/* strt landing  */
+.landing{
+    background-color: var(--dark-clr);
+    min-height: calc(100vh - 72px);
+}
+/* end landing  */
+/* start feature    */
+.feature svg{
+    color: var(--alt-clr);
+}
+.feature .tit{
+    color: var(--yel-clr);
+}
+/* end feture  */
+/* start work  */
+.our-work{
+    background-color:var(--section-bag) ;
+}
+.our-work ul .active{
+    background-color: var(--red-clr);
+    color: var(--yel-clr);
+}
+.our-work ul li{
+    padding: 0.5rem 1.1rem ;
+    cursor: pointer;
+}
+.our-work ul li:not(.active):hover{
+    color:var(--red-clr);
+}
+.our-work .box{
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.our-work .box::before{
+    content: attr(data-work);
+    position: absolute;
+    background-color: #41d4cfa4;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.4rem;
+    transition: 0.3s;
+    transform: translateX(calc(-100% - 5px));
+}
+.our-work .box:hover::before{
+    transform: translateX(0);
+
+}
+/* end work  */
+/* strt stuff  */
+.stuff .description{
+    max-width: 510px
+}
+/* end stuff */
+/* strt team  */
+.team{
+    background-color: var(--section-bag);
+}
+.team .team-head{
+    color: var(--yel-clr);
+}
+.team .box h4{
+    background-color: var(--alt-clr);
+}
+.team .box .img{
+    position: relative;
+    transition: 0.4s;
+}
+.team .box .img::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    bottom: 0;
+    left: 0;
+    transition: 0.4s;
+    z-index: 2;
+}
+.team .img:hover::before{
+    height: 100%;
+}
+/* end team */
+.project{
+    background-color: var(--dark-clr);
+}
+/*  */
+/* start subscribe */
+.subscribe{
+    background-color: var(--yel-clr);
+}
+.subscribe input{
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    padding-left: 0.3rem;
+    background-color: transparent;
+}
+.subscribe input::placeholder{
+    color: #fff;
+    opacity: 0.8;
+    transition: 0.3s;
+
+}
+.subscribe input:focus::placeholder{
+    opacity: 0.1;
+
+}
+.subscribe button{
+    border: none;
+    background-color: var(--dark-clr);
+    color: var(--yel-clr);
+}
+.subscribe button:hover{
+    background-color: var(--dark-clr);
+    color: #fff;
+}
+/* end subscribe */
+/* :start footer  */
+
+footer{
+    background-color: var(--dark-clr);
+}
+
+footer .copy-right span{
+    color: var(--yel-clr);
+}
+footer ul svg{
+    color: #fff;
+    width: 20px;
+    height: 20px;
+}
+.faceb {
+    background-color: #1877f2;
+}
+.twitter {
+    background-color:#1da1f2 ;
+}
+.insta {
+    background-color:#c32aa3 ;
+}
+.ghub {
+    background-color: #222;
+}
+footer .btn{
+    border: none;
+    color: #fff;
+    background-color: var(--red-clr);
+}
+footer .btn:hover{
+    opacity: .9;
+    color: #fff;
+    background-color: var(--red-clr);
+
+}
+/* end footer  */
